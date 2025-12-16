@@ -1,0 +1,91 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color-scheme: light dark;
+    /* color: rgba(255, 255, 255, 0.87); */
+    background-color: #242424;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#map { 
+  height: calc(100vh - 28px);
+  width: 100%;
+}
+
+.qmaps-header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  background-color: #242424;
+}
+
+
+.qmaps-timeline {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2px 0;
+}
+
+.qmaps-timeline span {
+  margin: 0 8px;
+}
+.header-logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center; /* vertical alignment */
+}
+.logo-svg {
+    height: 28px;
+    display: inline-block;
+}
+
+.timeline-btn {
+    cursor: pointer;
+}
+
+.leaflet-control-mouseposition {
+  height: 40px;
+  margin: 0;
+}
+
+.leaflet-control-mouseposition > h3 {
+  text-align: center;
+  line-height: 5px;
+}
+
+/* Only the circle within the custom-animated-icon class will get animated */
+.location-marker circle {
+  fill: #3359F6;
+  stroke-width: 10%;
+  animation: borderAnimation 1.2s infinite alternate;
+}
+
+@keyframes borderAnimation {
+  0% {
+    stroke-width: 15%;
+  }
+  100% {
+    stroke-width: 5%;
+  }
+}
+
+.text-chainage {
+  color: azure;
+  white-space: nowrap;
+}
